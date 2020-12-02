@@ -2,11 +2,12 @@ export default [
   {
     id: '1',
     linkImage:
-      'https://2.bp.blogspot.com/-QrkYk5ynon4/WyEd9vVGxpI/AAAAAAAAwPE/jnlRztwrDGAcACUvC-UGzmxWPkvMU6lAACLcBGAs/s640/anh-girl-xinh-chon-loc-11.jpg',
+      'https://cdn3.ivivu.com/2014/11/30-anh-phong-canh-vao-chung-ket-cuoc-thi-anh-Vnexpress-iVIVU.com-2.jpg',
     online: true,
     avatar:
       'https://kenh14cdn.com/thumb_w/620/2019/9/27/575061793121739594523578808931448312057510n-1569234622929668354670-15695179174971563375146.jpg',
-    story: 'hello',
+    story:
+      'Hey, cutie. Just wanted to let you know that this story originally rain our October issue, so if you like what you see, you should probably snag a hard copy ASAP. Bye!',
     name: 'Linh Dan',
   },
   {

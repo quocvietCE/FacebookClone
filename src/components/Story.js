@@ -16,53 +16,56 @@ const linkImage =
 
 const Story = () => {
   return (
-    <View style={styles.container}>
-      <FlatList
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        data={storyList}
-        style={styles.scrollView}
-        renderItem={({item}) => (
-          <View style={styles.card}>
-            <Image
-              style={styles.cardStory}
-              source={{
-                uri: item.linkImage,
-              }}
-            />
-            <View style={styles.cardUser}>
-              <Avatar
-                source={item.avatar}
-                online={item.online}
-                story={item.story}
+    <>
+      <View style={styles.container}>
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          data={storyList}
+          style={styles.scrollView}
+          renderItem={({item}) => (
+            <View style={styles.card}>
+              <Image
+                style={styles.cardStory}
+                source={{
+                  uri: item.linkImage,
+                }}
               />
-            </View>
+              <View style={styles.cardUser}>
+                <Avatar
+                  source={item.avatar}
+                  online={item.online}
+                  story={item.story}
+                />
+              </View>
 
-            <View style={styles.cardFooter}>
-              <Text style={styles.text}>{item.name}</Text>
+              <View style={styles.cardFooter}>
+                <Text style={styles.text}>{item.name}</Text>
+              </View>
             </View>
-          </View>
-        )}
-        keyExtractor={({id}) => id}
-        ListHeaderComponent={
-          <View style={styles.card}>
-            <Image
-              style={styles.cardStory}
-              source={{
-                uri: linkImage,
-              }}
-            />
-            <View style={styles.cardUser}>
-              <AntDesign name="plus" size={24} color="#1777f2" />
-            </View>
+          )}
+          keyExtractor={({id}) => id}
+          ListHeaderComponent={
+            <View style={styles.card}>
+              <Image
+                style={styles.cardStory}
+                source={{
+                  uri: linkImage,
+                }}
+              />
+              <View style={styles.cardUser}>
+                <AntDesign name="plus" size={24} color="#1777f2" />
+              </View>
 
-            <View style={styles.cardFooter}>
-              <Text style={styles.text}>Add To Story</Text>
+              <View style={styles.cardFooter}>
+                <Text style={styles.text}>Add To Story</Text>
+              </View>
             </View>
-          </View>
-        }
-      />
-    </View>
+          }
+        />
+      </View>
+      <View style={styles.bottomDivider} />
+    </>
   );
 };
 
@@ -111,5 +114,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     textShadowColor: 'rgba(0,0,0,0.4)',
+  },
+  bottomDivider: {
+    width: '100%',
+    height: 9,
+    backgroundColor: '#f0f2f5',
   },
 });

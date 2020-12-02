@@ -1,6 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Avatar from './Avatar';
 import feedList from '../hardData/feedList';
 
@@ -37,6 +39,49 @@ const Feed = () => {
           style={styles.photo}
           resizeMode="contain"
         />
+        <View style={styles.footer}>
+          <View style={styles.footerCount}>
+            <View style={styles.row}>
+              <View style={styles.iconCount}>
+                <AntDesign name="like1" color="#fff" size={12} />
+              </View>
+              <Text style={styles.textCount}>88 likes</Text>
+            </View>
+            <Text style={styles.textCount}>2k comments</Text>
+          </View>
+          <View style={styles.separator} />
+          <View style={styles.footerMenu}>
+            <TouchableOpacity style={styles.button}>
+              <View style={styles.icon}>
+                <AntDesign name="like2" color="#424040" size={20} />
+              </View>
+              <Text style={styles.text}>Like</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button}>
+              <View style={styles.icon}>
+                <MaterialCommunityIcons
+                  name="comment-outline"
+                  color="#424040"
+                  size={20}
+                />
+              </View>
+              <Text style={styles.text}>Comments</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button}>
+              <View style={styles.icon}>
+                <MaterialCommunityIcons
+                  name="share-outline"
+                  color="#424040"
+                  size={20}
+                />
+              </View>
+              <Text style={styles.text}>Share</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.bottomDivider} />
       </View>
     </>
   );
@@ -79,5 +124,51 @@ const styles = StyleSheet.create({
     marginTop: 9,
     width: '100%',
     height: 300,
+  },
+  footer: {
+    paddingHorizontal: 11,
+  },
+  footerCount: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 9,
+  },
+  iconCount: {
+    backgroundColor: '#1878f3',
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 6,
+  },
+  textCount: {
+    fontSize: 11,
+    color: '#424040',
+  },
+  separator: {
+    width: '100%',
+    height: 1,
+    backgroundColor: '#f9f9f9',
+  },
+  footerMenu: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 9,
+  },
+  button: {
+    flexDirection: 'row',
+  },
+  icon: {
+    marginRight: 6,
+  },
+  text: {
+    fontSize: 12,
+    color: '#424040',
+  },
+  bottomDivider: {
+    width: '100%',
+    height: 9,
+    backgroundColor: '#f0f2f5',
   },
 });
