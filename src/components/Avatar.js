@@ -1,12 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, View, Image} from 'react-native';
 
 const Avatar = ({source, online, story}) => {
-  console.log('source: ', source);
   return (
     <View style={styles.container}>
       <Image
-        style={[styles.userImage, story && {borderWidth: 3}]}
+        style={[styles.userImage, story && styles.border]}
         source={{uri: source}}
       />
       {online && <View style={styles.userActive} />}
@@ -39,4 +38,5 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#fff',
   },
+  border: {borderWidth: 3},
 });

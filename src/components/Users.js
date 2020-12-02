@@ -1,29 +1,10 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, FlatList} from 'react-native';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Avatar from './Avatar';
 
 import dataUserAvatar from '../hardData/userList';
-
-const linkImage =
-  'https://quatangme.com/kcfinder/upload//files/anh-gai-xinh-dep-hot-girl-3.jpg';
-
-const linkImage1 =
-  'https://quatangme.com/kcfinder/upload//files/anh-girl-xinh-9.jpg';
-
-const linkImage2 =
-  'https://quatangme.com/kcfinder/upload//files/anh-girl-xinh-9x-kute-12.jpg';
-
-const linkImage3 =
-  'https://quatangme.com/kcfinder/upload//files/photo1538392226601-15383922266012085392896.jpg';
 
 const Users = () => {
   return (

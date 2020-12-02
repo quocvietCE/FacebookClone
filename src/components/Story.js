@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  Image,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Avatar from './Avatar';
 import storyList from '../hardData/storyList';

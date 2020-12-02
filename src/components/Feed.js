@@ -4,7 +4,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Avatar from './Avatar';
-import feedList from '../hardData/feedList';
+// import feedList from '../hardData/feedList';
 
 const linkImage =
   'https://sohanews.sohacdn.com/2019/9/3/photo-1-15674713690051885929813.jpg';
@@ -18,7 +18,7 @@ const Feed = () => {
         <View style={styles.header}>
           <View style={styles.row}>
             <Avatar source={linkImage} />
-            <View style={{paddingLeft: 10}}>
+            <View style={styles.headerPost}>
               <Text style={styles.user}>Linh Dan</Text>
               <View style={styles.row}>
                 <Text style={styles.time}>9m</Text>
@@ -171,4 +171,5 @@ const styles = StyleSheet.create({
     height: 9,
     backgroundColor: '#f0f2f5',
   },
+  headerPost: {paddingLeft: 10},
 });
